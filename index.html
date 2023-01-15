@@ -22,34 +22,51 @@
     <! -- ================== HEADER ================== -- >
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">do it now</a>
-
             <div class="nav__menu" id="nav-menu">
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+                
                 <ul class="nav__list grid">
                     <li class="nav__item">
                         <a href="#home" class="nav__link">
-                            <i class="uil uil-estate"></i> home
+                            <i class="uil uil-estate nav__icon"></i> 
+                            home
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#tasks" class="nav__link">
-                            <i class="uil uil-clipboard-notes"></i> tasks
+                            <i class="uil uil-clipboard-notes nav__icon"></i> 
+                            tasks
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#calendar" class="nav__link">
-                            <i class="uil uil-calendar-alt"></i> calendar
+                            <i class="uil uil-calendar-alt nav__icon"></i> 
+                            calendar
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#settings" class="nav__link">
+                            <i class="uil uil-setting nav__icon"></i> 
+                            settings
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#darkmode" class="nav__link">
+                            <i class="uil uil-moon nav__icon"></i>
+                            darkmode
                         </a>
                     </li>
                 </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
 
             <div class="nav__btns">
                 <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
+                    <i class="uil uil-bars"></i>
                 </div>
             </div>
+
+            <a href="#home" class="nav__logo">do it <span class="nav__logo-span">now!</span>
+            </a>
         </nav>
     </header>
 
@@ -57,7 +74,32 @@
     <main class="main">
         <! -- ================== HOME ================== -- >
         <section class="home section" id="home">
-            
+            <div class="home__container grid">
+                <div class="home__content grid">
+                    <div class="home__info">
+                        <h1 class="home__title">Hello Camille</h1>
+                        <h3 class="home__subtitle">Today you have 10 tasks</h3>
+                    </div>
+
+                    <div class="home__img">
+                        <img src="./assets/img/landing-page-header-picture.png" alt="">
+                    </div>
+                </div>
+                
+                <div class="home__menu" id="home-menu">
+                    <ul class="home__description grid">
+                        <form action="#" class="todo__form grid">
+                            <input type="text" id="todo-input">
+                            <button class="button__icon">Add task</button>
+                            <h2 class="tasks__menu" id="tasks-menu">
+                                <ul id="tasks__list grid">
+
+                                </ul>
+                            </h2>
+                        </form>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <! -- ================== TASKS ================== -- >
@@ -74,15 +116,14 @@
     </div>
 
     <! -- ================== SCROLL TOP ================== -- >
-    <a href="#" class="scrollup" id="scroll-up">
+    <!-- <a href="#" class="scrollup" id="scroll-up">
         <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
+    </a> -->
     
     <! -- ================== SWIPER JS ================== -- >
     <script src=""></script>
     
     <! -- ================== MAIN JS ================== -- >
-    
-    <script src=""></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>
