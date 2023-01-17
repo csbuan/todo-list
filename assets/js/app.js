@@ -28,3 +28,23 @@ function linkAction(){
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*================ TODO LIST ITEMS ================*/
+const form = document.querySelector('#todo-form');
+const input = document.querySelector('#todo-input');
+const list = document.querySelector('#tasks-list');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const newTask = input.value;
+    const createElement = document.createElement('div');
+    createElement.classList.add('list__item');
+    const newLI = document.createElement('input');
+    newLI.type = "checkbox";
+    const label = document.createElement('label');
+    label.innerText = newTask;
+    list.append(createElement);
+    createElement.append(newLI);
+    createElement.append(label);
+    input.value = '';
+})

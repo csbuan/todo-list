@@ -23,8 +23,6 @@
     <header class="header" id="header">
         <nav class="nav container">
             <div class="nav__menu" id="nav-menu">
-                <i class="uil uil-times nav__close" id="nav-close"></i>
-                
                 <ul class="nav__list grid">
                     <li class="nav__item">
                         <a href="#home" class="nav__link">
@@ -57,6 +55,7 @@
                         </a>
                     </li>
                 </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
 
             <div class="nav__btns">
@@ -86,18 +85,23 @@
                     </div>
                 </div>
                 
-                <div class="home__menu" id="home-menu">
-                    <ul class="home__description grid">
-                        <form action="#" class="todo__form grid">
-                            <input type="text" id="todo-input">
-                            <button class="button__icon">Add task</button>
-                            <h2 class="tasks__menu" id="tasks-menu">
-                                <ul id="tasks__list grid">
+                <div class="home__data">
+                    <form action="#" class="todo__form grid" id="todo-form">
+                        <div class="todo__content">
+                            <input type="text" class="todo__input" id="todo-input">
 
-                                </ul>
-                            </h2>
-                        </form>
-                    </ul>
+                            <a href="#" class="button button--flex">
+                                <i class="uil uil-plus button__icon"></i>
+                                Add Task
+                            </a>
+                        </div>
+                            
+                        <div>
+                            <ul class="tasks__list grid" id="tasks-list">
+
+                            </ul>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

@@ -158,6 +158,7 @@ img {
 
 /*================ NAV ================*/
 .nav {
+    /* max-width: 767px; */
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -170,7 +171,7 @@ img {
     color: var(--title-color);
 }
 
-.nav__logo,
+.nav__logo, /* mine */
 .nav__logo-span {
     letter-spacing: 3px;
     font-weight: var(--font-semi-bold);
@@ -204,7 +205,7 @@ img {
 @media screen and (max-width: 767px) {
     .nav__menu {
         position: fixed;
-        width: 20%;    
+        width: 30%;    
         height: 100%; 
         top: 0;       /* This aligns the nav__menu so everything will be on screen from the top */
         left: -100%;    /* So the navbar will be on left side */
@@ -216,13 +217,15 @@ img {
     }
 }
 
-.nav__list {
-    display: flex;
+.nav__list { 
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2rem;
+    /* display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     row-gap: 1.5rem;
-    padding-top: 1rem;
+    padding-top: 1rem; */
 }
 
 .nav__link {
@@ -241,7 +244,7 @@ img {
 .nav__close {
     position: absolute;
     top: .75rem;
-    left: 2.5rem;
+    right: 2.5rem;
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--title-color);
@@ -252,9 +255,6 @@ img {
 }
 
 .nav__icon {
-    display: inline-block;
-    justify-content: center;
-    align-content: center;
     font-size: 1.5rem;
 }
 
@@ -264,32 +264,26 @@ img {
 }
 
 /* active link */   /* add this last */
-/* .active-link {
+.active-link {
     color: var(--first-color);
-} */
+}
 
 /* change background header */ 
-/* add later */
+.scroll-header {
+    box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+}
 
 /*================ HOME ================*/
 .home__container {
     gap: 1rem;
 }
 
+
 .home__content {
-    grid-template-columns: 2fr 1fr;
+    display: flex;
     padding-top: 3.5rem;
-    justify-content: center;
-    align-content: center;
-}
-
-.home__menu {
-    grid-column: 1/2;
-}
-
-.home__img {
-    width: 100px;
-    border: 1px solid var(--first-color);
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2);
 }
 
 .home__title {
@@ -302,3 +296,74 @@ img {
     font-weight: var(--font-medium);
 }
 
+.home__img {
+    width: 100px;
+    border: 1px solid var(--text-color);
+}
+
+
+/* form */ 
+.home__data {
+    /* grid-column: 1/2; */
+    background-color: var(--body-color);
+    width: max-content;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding: 1rem 0 1rem 1rem;
+    border-radius: 1rem;
+}
+
+.todo__form {
+    display: flex;
+    align-items: center;
+}
+
+.todo__input {
+    width: 100%;
+    background: var(--input-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    outline: none;
+    border: none;
+    font-size: 1.25rem;
+    border-radius: .5rem;
+    padding: .25rem;
+}
+
+.tasks__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list__item {
+    display: flex;
+    
+}
+
+/*================ BUTTONS ================*/
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #FFF;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+}
+
+.button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.button__icon {
+    font-size: 1.25rem;
+    margin-right: var(--mb-0-5);
+    transition: .3s;
+}
+
+.button--flex { /* aligns the text to the icon */
+    display: inline-flex;
+    align-items: center;
+}
