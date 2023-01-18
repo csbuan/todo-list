@@ -22,7 +22,26 @@
     <! -- ================== HEADER ================== -- >
     <header class="header" id="header">
         <nav class="nav container">
-            <div class="nav__menu" id="nav-menu">
+            <div class="nav__toggle navbar" id="nav-toggle">
+                <i class="uil uil-bars"></i>
+            </div>
+
+            <div class="nav__tasks navbar" id="nav-tasks">
+                <i class="uil uil-file-check-alt navbar__icon"></i>
+                Tasks
+            </div>
+
+            <div class="nav__calendar navbar" id="nav-calendar">
+                <i class="uil uil-calendar-alt navbar__icon"></i>
+                Calendar
+            </div>
+
+            <div class="nav__user navbar" id="nav-user">
+                <i class="uil uil-user-square navbar__icon"></i>
+                Profile
+            </div>
+
+            <div class="navtoggle__menu" id="navtoggle-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
                         <a href="#home" class="nav__link">
@@ -55,17 +74,9 @@
                         </a>
                     </li>
                 </ul>
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
                 <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
-
-            <div class="nav__btns">
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-bars"></i>
-                </div>
-            </div>
-
-            <a href="#home" class="nav__logo">do it <span class="nav__logo-span">now!</span>
-            </a>
         </nav>
     </header>
 
@@ -73,7 +84,7 @@
     <main class="main">
         <! -- ================== HOME ================== -- >
         <section class="home section" id="home">
-            <div class="home__container grid">
+            <div class="home__container container grid">
                 <div class="home__content grid">
                     <div class="home__info">
                         <h1 class="home__title">Hello Camille</h1>
@@ -83,25 +94,36 @@
                     <div class="home__img">
                         <img src="./assets/img/landing-page-header-picture.png" alt="">
                     </div>
-                </div>
                 
-                <div class="home__data">
-                    <form action="#" class="todo__form grid" id="todo-form">
-                        <div class="todo__content">
-                            <input type="text" class="todo__input" id="todo-input">
-
-                            <a href="#" class="button button--flex">
-                                <i class="uil uil-plus button__icon"></i>
-                                Add Task
-                            </a>
-                        </div>
+                
+                    <div class="home__data container">
+                        <form action="#" class="todo__form grid" id="todo-form">
+                            <div class="todo__content">
+                                <input type="text" class="todo__input" id="todo-input">
+                            </div>
                             
-                        <div>
-                            <ul class="tasks__list grid" id="tasks-list">
+                            <div>
+                                <a href="#" class="button button--flex">
+                                    <i class="uil uil-plus button__icon"></i>
+                                    Add Task
+                                </a>
+                            </div>
+                                
+                            <div>
+                                <ul class="tasks__list grid" id="tasks-list">
 
-                            </ul>
-                        </div>
-                    </form>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
                 </div>
             </div>
         </section>
