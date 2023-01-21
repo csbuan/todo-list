@@ -6,12 +6,12 @@
 
     /*================ Colors ================*/
     /*Change favorite color */
-    --hue-color: 53; /* Dark Green*/
+    --hue-color: 205; /* Dark Green*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 60%, 75%);     /* Light mode: Header(logo) color, pink */
     --first-color-alt: hsl(var(--hue-color), 25%, 61%); /* Dark mode: Text color of active buttons and icons of socmed, pink*/
-    --first-color-lighter: hsl(var(--hue-color), 43%, 73%); /* Dark mode: Navbar Text color, dirtywhite */
+    --first-color-lighter: hsl(var(--hue-color), 10%, 92%); /* Dark mode: Navbar Text color, dirtywhite */
     --title-color: hsl(var(--hue-color), 6%, 43%);  /* Light mode: Navbar Text color, grayish */
     --text-color: hsl(var(--hue-color), 6%, 43%);   /* Front-end developer stronger color, grayish */
     --input-color: hsl(var(--hue-color), 10%, 92%); 
@@ -165,45 +165,86 @@ img {
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.main__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1); */
 }
 
 .navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.navbar {
+    display: flex;
     flex-direction: column;
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+.navbar:hover {
+    cursor: pointer;
 }
 
 .navbar__icon {
     display: flex;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
 } 
+
+.main__navbar-item {
+    font-size: .5rem;
+}
+
 
 @media screen and (max-width: 767px) {
     .navtoggle__menu {
         position: fixed;
-        bottom: -100%;    
-        left: 0;       /* This aligns the nav__menu so everything will be on screen from the top */
-        width: 100%;
+        left: -100%;    
+        top: 0;
+        width: 80%;
+        height: 100vh;
         background-color: var(--body-color);
-        padding: 2rem 1.5rem 4rem;
+        /* padding: 2rem 1.5rem 4rem; */
         box-shadow: 0 -1px 4px rgba(0,0,0,.15);
-        border-radius: 1.5rem 1.5rem 0 0;
+        border-radius: 0 1.5rem 1.5rem 0;
         transition: .3s;
+        overflow: hidden;
+        z-index: var(--z-fixed);
     }
 }
 
 .nav__list { 
-    grid-template-rows: repeat(5, 1fr);
-    gap: 2rem;
+    /* grid-template-rows: repeat(5, 1fr); */
+    row-gap: .25rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 2rem 1.5rem 4rem;
+    height: auto;
+    overflow: auto;
+}
+
+.nav__item {
+    white-space: nowrap;
+    height: auto;
 }
 
 .nav__link {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    font-size: var(--small-font-size);
+    font-size: var(--font-medium);
     color: var(--title-color);
     font-weight: var(--font-medium);
+    gap: 1rem;
 }
 
 .nav__link:hover {
@@ -211,13 +252,13 @@ img {
 }
 
 .nav__icon {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .nav__close {
     position: absolute;
-    left: 1.3rem;
-    bottom: 0.5rem;
+    right: 1.3rem;
+    top: 0.5rem;
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--first-color);
@@ -227,9 +268,36 @@ img {
     color: var(--first-color-alt);
 }
 
+.nav__logo,
+.nav__logo-icon {
+    margin: 0;
+    height: 150px;
+    width: 100%;
+}
+
+.nav__logo-title {
+    position: absolute;
+    left: 1.3rem;
+    top: 2.5rem;
+    color: #FFF;
+    letter-spacing: .25rem;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.nav__logo-conspan {
+    font-size: 1.25rem;
+    font-weight: var(--font-medium)
+}
+
+.dropdown__item {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    white-space: nowrap;
+}
 /* show menu */
 .show-menu {
-    bottom: 0;
+    left: 0;
 }
 
 /* active link */   /* add this last */
@@ -241,6 +309,11 @@ img {
 .scroll-header {
     box-shadow: 0 -1px 4px rgba(0,0,0,.15);
 }
+
+/* Dropdown */
+
+
+
 
 /*================ HOME ================*/
 .home__container {

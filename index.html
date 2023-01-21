@@ -22,60 +22,108 @@
     <! -- ================== HEADER ================== -- >
     <header class="header" id="header">
         <nav class="nav container">
-            <div class="nav__toggle navbar" id="nav-toggle">
-                <i class="uil uil-bars"></i>
+            <!-- ----------------------- Main Navbar Menu - Bottom ----------------------- -->
+            <div class="main__navbar">
+                <div class="nav__toggle navbar" id="nav-toggle">
+                    <i class="uil uil-bars navbar__icon"></i>
+                </div>
+
+                <div class="nav__tasks navbar" id="nav-tasks">
+                    <i class="uil uil-file-check-alt navbar__icon"></i>
+                    <span class="main__navbar-item">Tasks</span>
+                </div>
+
+                <div class="nav__calendar navbar" id="nav-calendar">
+                    <i class="uil uil-calendar-alt navbar__icon"></i>
+                    <span class="main__navbar-item">Calendar</span>
+                </div>
+
+                <div class="nav__user navbar" id="nav-user">
+                    <i class="uil uil-user-square navbar__icon"></i>
+                    <span class="main__navbar-item">Profile</span>
+                </div>
             </div>
 
-            <div class="nav__tasks navbar" id="nav-tasks">
-                <i class="uil uil-file-check-alt navbar__icon"></i>
-                Tasks
-            </div>
-
-            <div class="nav__calendar navbar" id="nav-calendar">
-                <i class="uil uil-calendar-alt navbar__icon"></i>
-                Calendar
-            </div>
-
-            <div class="nav__user navbar" id="nav-user">
-                <i class="uil uil-user-square navbar__icon"></i>
-                Profile
-            </div>
-
+            <!-- ----------------------- Side Navbar Menu - Toggle ----------------------- -->
             <div class="navtoggle__menu" id="navtoggle-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">
-                            <i class="uil uil-estate nav__icon"></i> 
-                            home
+                <div class="nav__header">
+                    <div class="nav__logo" id="nav-logo">
+                        <img class="nav__logo-icon" src="./assets/img/navtoggle__menu logo.jpg" alt="">
+                    </div>
+
+                    <h2 class="nav__logo-title">d<span><i class="uil uil-plus-circle nav__logo-conspan"></i></span> it n<span><i class="uil uil-check-circle nav__logo-conspan"></i></span>w!</h2>
+                </div>
+
+                <div class="nav__list grid">
+                    <div class="nav__item">
+                        <a href="#upgradetopro" class="nav__link">
+                            <i class="uil uil-trophy nav__icon"></i> 
+                            <span class="side__navbar-item"></span>Upgrade to PRO
                         </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#tasks" class="nav__link">
-                            <i class="uil uil-clipboard-notes nav__icon"></i> 
-                            tasks
+                    </div>
+                        
+                    <div class="nav__dropdown">
+                        <a href="#category" class="nav__link">
+                            <i class="uil uil-apps nav__icon"></i> 
+                            <span class="side__navbar-item"></span>Category
+                            <i class="uil uil-angle-down nav__icon nav__dropdown-icon"></i>
                         </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#calendar" class="nav__link">
+                    <!-- ----------------------- Sub-menu ----------------------- -->
+                        <div class="nav__dropdown-collapse">
+                            <a href="#" class="nav__link">
+                                <i class="uil uil-th-large nav__icon"></i>
+                                <span class="dropdown__item">All</span>
+                            </a>
+    
+                            <a href="#" class="nav__link">
+                                <i class="uil uil-suitcase-alt nav__icon"></i>
+                                <span class="dropdown__item">Work</span>
+                            </a>
+    
+                            <a href="#" class="nav__link">
+                                <i class="uil uil-bed nav__icon"></i>
+                                <span class="dropdown__item">Personal</span>
+                            </a>
+    
+                            <a href="#" class="nav__link">
+                                <i class="uil uil-shopping-cart nav__icon"></i>
+                                <span class="dropdown__item">Wishlist</span>
+                            </a>
+    
+                            <a href="#" class="nav__link">
+                                <i class="uil uil-gift nav__icon"></i>
+                                <span class="dropdown__item">Birthday</span>
+                            </a> 
+                        </div>
+                    </div>
+                        
+                    <div class="nav__item">
+                        <a href="#backlog" class="nav__link">
                             <i class="uil uil-calendar-alt nav__icon"></i> 
-                            calendar
+                            <span class="side__navbar-item">Backlog</span>
+                        </a>                
+                    </div>
+                    <div class="nav__item">
+                        <a href="#routines" class="nav__link">
+                            <i class="uil uil-spinner nav__icon"></i> 
+                            <span class="side__navbar-item">Routines</span>
                         </a>
-                    </li>
-                    <li class="nav__item">
+                    </div>
+                    <div class="nav__item">
                         <a href="#settings" class="nav__link">
                             <i class="uil uil-setting nav__icon"></i> 
-                            settings
+                            <span class="side__navbar-item">Settings</span>
                         </a>
-                    </li>
-                    <li class="nav__item">
+                    </div>
+                    <div class="nav__item">
                         <a href="#darkmode" class="nav__link">
                             <i class="uil uil-moon nav__icon"></i>
-                            darkmode
+                            <span class="side__navbar-item">Darkmode</span>
                         </a>
-                    </li>
-                </ul>
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
+                    </div>
+                </div>
+
+                <i class="uil uil-bars nav__close" id="nav-close"></i>
             </div>
         </nav>
     </header>
@@ -90,6 +138,11 @@
                         <h1 class="home__title">Hello Camille</h1>
                         <h3 class="home__subtitle">Today you have 10 tasks</h3>
                     </div>
+                    
+                    <!-- <div class="home__info">
+                        <h1 class="home__title">Hello Camille</h1>
+                        <h3 class="home__subtitle">Today you have 10 tasks</h3>
+                    </div> -->
 
                     <div class="home__img">
                         <img src="./assets/img/landing-page-header-picture.png" alt="">
