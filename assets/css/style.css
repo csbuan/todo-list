@@ -169,6 +169,10 @@ img {
     margin-right: var(--mb-1-5);
 }
 
+.navtoggle__menu::-webkit-scrollbar {
+    display: none;  /* For Chrome and others */
+}
+
 .main__navbar {
     display: flex;
     justify-content: space-between;
@@ -253,6 +257,7 @@ img {
 
 .nav__icon {
     font-size: 1.5rem;
+    margin-right: .25rem;
 }
 
 .nav__close {
@@ -290,11 +295,45 @@ img {
     font-weight: var(--font-medium)
 }
 
+/* Dropdown */
 .dropdown__item {
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
     white-space: nowrap;
 }
+
+.nav__dropdown {
+    overflow: hidden;
+    /* max-height: 21px; */
+    transition: .4s ease-in-out;
+}
+
+.nav__dropdown-collapse {
+    background: var(--first-color-lighter);
+    border-radius: .25rem;
+    margin-top: 1rem;
+}
+
+.nav__dropdown-content {
+    display: grid;
+    row-gap: .25rem;
+    padding: .75rem 2.5rem .75rem 1.8rem;
+}
+
+.dropdown-item {
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+}
+
+.dropdown-item:hover {
+    color: var(--first-color);
+}
+
+.nav__dropdown-icon {
+    margin-left: auto;
+}
+
 /* show menu */
 .show-menu {
     left: 0;
@@ -309,11 +348,6 @@ img {
 .scroll-header {
     box-shadow: 0 -1px 4px rgba(0,0,0,.15);
 }
-
-/* Dropdown */
-
-
-
 
 /*================ HOME ================*/
 .home__container {
